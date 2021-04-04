@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(41, 76, 228);
+}
+.logo{
+    color: cornsilk;
+    float: left;
+    padding-left: 15px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 10px;
+  text-decoration: none;
+}
+.top{
+    overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+.top label{
+    float: left;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(41, 76, 228);
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.top select{
+    float: left;
+    padding: 8px 12px;
+    margin-top: 10px;
+    color: #edf5fa;
+    background-color: rgb(226, 93, 197);
+  
+    cursor:pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.top a{
+    float: right;
+    padding: 8px 12px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #edf5fa;
+    background-color: rgb(14, 122, 41);
+  
+    cursor:pointer;
+    font-size: 16px;
+    text-decoration: none;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 14px 16px;
+  background-color:rgb(41, 76, 228);
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(22, 51, 218);
+  border-radius: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.container{
+    position: relative;
+    width: fit-content;
+    height: 1050px;
+   
+    background: rgb(89, 237, 245);
+}
+
+.container .box{
+    position: relative;
+    width: 32.3%;
+    height: 500px;
+    background: rgb(255, 255, 255);
+    float: left;
+    margin: 5px;
+    margin-top: 15px;
+    border-radius: 10px; 
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.container .box .box1{
+    position: relative;
+    width: 337px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    float: top;
+    margin: 15px; 
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: left;
+}
+.container .box .box1 h3{
+    text-align: center;
+    background-color: violet;
+    border-radius: 10px;
+    padding: 5px;
+}
+.container .box .box2{
+    position: relative;
+    width: 365px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    float: inline-end;
+    margin: 5px;
+    border-radius: 10px; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.bidnow{
+    background-color: rgb(14, 122, 41);
+    color: white;
+    height: 30px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: rgb(190, 42, 190);
+   margin-left: 50px;
+}
+
+.container2{
+    max-width: 1170px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ul{
+    list-style: none;
+
+}
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+    
+}
+.footer-col{
+    width: 22.3%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 100px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+    
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transform: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-link a{
+    display:inline-block;
+    
+    height: 40px;
+    width: 40px;
+    background-color: rgba(245, 238, 146, 0.616);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transform: all 0.5s ease;
+}
+.footer-col .social-link a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+    padding-bottom: 8px;
+
+}
+.text-primary{
+    color: #ffffff;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="navbar">
+            <h2 class="logo">WOODY BUDDY</h2>
+            <div class="dropdown">
+                <button class="dropbtn" >Select Language <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Gujarati</a>
+                  <a href="#">Hindi</a>
+                  <a href="#">Marathi</a>
+                  <a href="#">Tamil</a>
+                </div>
+              </div> 
+            <a href="#home">Home</a>
+            <a href="#">Creative Section</a>
+            <a href="#">Team</a>  
+            <a href="#">Browse Job</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+          </div>
+    </nav>
+</header>
+<div class="top">
+        <label for="location">Choose Location</label>
+        <select id="location" name="location">
+          <option value="newdelhi">New Delhi</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="pune">Pune</option>
+          <option value="jaipur">Jaipur</option>
+          <option value="agra">Agra</option>
+          <option value="indore">Indore</option>
+        </select>
+
+        <label for="jobtype">Job Type</label>
+        <select id="jobtype" name="jobtype">
+          <option value="door_repair">Door Repair</option>
+          <option value="furniture_assembly">Furniture Assembly</option>
+          <option value="lock_installation">Lock Installation</option>
+          <option value="tv_installation">TV Installation</option>
+          <option value="water_leakage">Water Leakage</option>
+          <option value="drill_and_hang">Drill and Hang</option>
+        </select>
+
+        <a href="#">Previous</a>
+        <a href="#">Next</a>
+</div>
+<div class="container">
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="heading"><h3>Tv installation</h3>
+                <P>Preffered Time Slot: Afternoon(12-4 P.M.)<br>
+                    TV installation at home</P>
+                    <h5><span class="badge badge-primary">Preffered Langage: Hindi </span></h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item text-primary">Balcony</li>
+                    </ul>
+                        <p class="text-wrap"> <i class="fa fa-map-marker" style="font-size:24px;color:rgba(40, 58, 90, 0.9)"></i>
+                        &nbsp;Location: vijay nagar, Indore</p>
+                    <h5 style="background: tomato;text-align: center; border-radius: 10px;height: 22px; width: 56px;">Expired</h5>
+            </div>  
+        </div>
+        <div class="box2">
+                <h5>Rs 100-500</h5>
+                <small>No Bid</small><br><br>
+                <button class="bidnow">Bid Now</button>     
+        </div>
+    
+    </div>
+
+</div>
+<footer class="footer">
+    <div class="container2">
+        <div class="row">
+            <div class="footer-col">
+                <h4>USEFUL LINKS</h4>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+                <ul>
+                    <li><a href="#">Plasma Buddyz</a></li>
+                    <li><a href="#">Corona Chain Tracker</a></li>
+                    <li><a href="#">Travel Buddyz</a></li>
+                    <li><a href="#">Woody Buddyz</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <div class="text-primary">
+     
+                    <i class="icofont-building-alt"></i> The Estate Building, 8th Floor, Dickenson Road, Banglore - 560042<p></p>
+                  
+                    <i class="icofont-ui-email"></i> <a href="#"></a>support@buddyzapp.com<p></p>
+                   
+                    <i class="icofont-phone"></i> + 91 6360144518
+                    </div>
+            </div>
+            <div class="footer-col">
+                <h4>Our Social Networks</h4>
+                <div class="social-link">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+</body>
+</html>
